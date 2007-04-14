@@ -1,0 +1,14 @@
+O:8:"AtomFeed":6:{s:5:"links";a:1:{i:0;a:1:{s:4:"href";s:19:"http://example.org/";}}s:10:"categories";a:0:{}s:7:"entries";a:1:{i:0;O:9:"AtomEntry":7:{s:5:"links";a:1:{i:0;a:1:{s:4:"href";s:36:"http://example.org/2003/12/13/atom03";}}s:10:"categories";a:0:{}s:5:"title";a:2:{i:0;s:4:"TEXT";i:1;s:28:"Atom-Powered Robots Run Amok";}s:2:"id";s:45:"urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a";s:7:"updated";s:20:"2003-12-13T18:30:02Z";s:7:"summary";a:2:{i:0;s:4:"TEXT";i:1;s:10:"Some text.";}s:7:"content";a:2:{i:0;s:19:"application/svg+xml";i:1;s:576:"
+      <svg xmlns="http://www.w3.org/2000/svg" width="225" height="100">
+        <title>stroke-linecap</title>
+        <g style="fill:none;stroke:rgb(255,50,50);stroke-width:2">
+                <path d="M10 10 l0 80"/>
+                <path d="M215 10 l0 80"/>
+        </g>
+        <g style="fill:none;stroke:black;stroke-width:7;">
+                <path style="stroke-linecap:butt" d="M10 25 l205 0"/>
+                <path style="stroke-linecap:round" d="M10 50 l205 0"/>
+                <path style="stroke-linecap:square" d="M10 75 l205 0"/>
+        </g>
+      </svg>
+    ";}}}s:5:"title";a:2:{i:0;s:4:"TEXT";i:1;s:12:"Example Feed";}s:7:"updated";s:20:"2003-12-13T18:30:02Z";s:2:"id";s:45:"urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6";}

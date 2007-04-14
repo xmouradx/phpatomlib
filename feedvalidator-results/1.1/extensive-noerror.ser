@@ -1,0 +1,8 @@
+O:8:"AtomFeed":8:{s:5:"links";a:2:{i:0;a:4:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:8:"hreflang";s:2:"en";s:4:"href";s:19:"http://example.org/";}i:1;a:3:{s:3:"rel";s:4:"self";s:4:"type";s:20:"application/atom+xml";s:4:"href";s:28:"http://example.org/feed.atom";}}s:10:"categories";a:0:{}s:7:"entries";a:1:{i:0;O:9:"AtomEntry":7:{s:5:"links";a:2:{i:0;a:3:{s:3:"rel";s:9:"alternate";s:4:"type";s:9:"text/html";s:4:"href";s:34:"http://example.org/2005/04/02/atom";}i:1;a:4:{s:3:"rel";s:9:"enclosure";s:4:"type";s:10:"audio/mpeg";s:6:"length";s:4:"1337";s:4:"href";s:45:"http://example.org/audio/ph34r_my_podcast.mp3";}}s:10:"categories";a:0:{}s:5:"title";a:2:{i:0;s:4:"TEXT";i:1;s:22:"Atom draft-07 snapshot";}s:2:"id";s:27:"tag:example.org,2003:3.2397";s:7:"updated";s:20:"2005-07-11T12:29:29Z";s:9:"published";s:25:"2003-12-13T08:29:29-04:00";s:7:"content";a:2:{i:0;s:5:"XHTML";i:1;s:127:"
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><i>[Update: The Atom draft is finished.]</i></p>
+      </div>
+    ";}}}s:5:"title";a:2:{i:0;s:4:"TEXT";i:1;s:14:"dive into mark";}s:8:"subtitle";a:2:{i:0;s:4:"HTML";i:1;s:69:"
+    A <em>lot</em> of effort
+    went into making this effortless
+  ";}s:7:"updated";s:20:"2005-07-11T12:29:29Z";s:2:"id";s:22:"tag:example.org,2003:3";s:6:"rights";a:2:{i:0;s:4:"TEXT";i:1;s:32:"Copyright (c) 2003, Mark Pilgrim";}}
