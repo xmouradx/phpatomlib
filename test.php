@@ -54,7 +54,7 @@ function test_single($test, $result) {
     if(!file_exists($result)) throw new Exception('results file does not exist.');
 
     $parser = new AtomParser();
-    $parser->debug = true;
+    $parser->debug = false;
     $parser->FILE = $test;
     if(!$parser->parse()) {
         throw new Exception($parser->error);
@@ -64,9 +64,9 @@ function test_single($test, $result) {
         fclose($fh);
 
         if($expected == $parser->feed) {
-            print $parser->content;
-            print(str_repeat("#",40) . "\n");
-            print_r($parser->feed);
+            #print $parser->content;
+            #print(str_repeat("#",40) . "\n");
+            #print_r($parser->feed);
             return true;
         } else {
             throw new Exception('failure. objects do not match.');
