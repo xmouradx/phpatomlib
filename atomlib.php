@@ -80,13 +80,12 @@ class AtomParser {
         $this->content = '';
 
         $fp = fopen($this->FILE, "r");
-        while(!feof($fp)) {
-            $line = fgets($fp, 4096);
-            if($this->debug) $this->content .= $line;
+        while ($data = fread($fp, 4096)) {
+            if($this->debug) $this->content .= $data;
             
             try {
-                if(!xml_parse($parser, $line)) {
-                    throw new Exception(@sprintf(__('XML error: %s at line %d')."\n",
+                if(!xml_parse($parser, $data, feof($fp))) {
+                    throw new Exception(sprintf(__('XML error: %s at line %d')."\n",
                         xml_error_string(xml_get_error_code($xml_parser)),
                         xml_get_current_line_number($xml_parser)));
                 }
