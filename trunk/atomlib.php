@@ -1,10 +1,14 @@
 <?php
 /* 
- * app.php - Atom Publishing Protocol support for WordPress
- * Original code by: Elias Torres, http://torrez.us/archives/2006/08/31/491/
- * Modified by: Dougal Campbell, http://dougal.gunters.org/
+ * atomlib.php - Atom Syndication Format PHP Library 
  *
- * Version: 1.0.5-dc
+ * Project: http://code.google.com/p/phpatomlib/
+ *
+ * Author: Elias Torres <elias@torrez.us>
+ * Version: 0.4
+ * 
+ * Requires: PHP5
+ *
  */
 
 class AtomFeed {
