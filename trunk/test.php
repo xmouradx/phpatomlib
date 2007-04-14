@@ -1,5 +1,5 @@
 <?php
-require('./atomlib.php');
+require('./lib/atomlib.php');
 
 function ls($dir, $mask){
     $handle = opendir($dir);
