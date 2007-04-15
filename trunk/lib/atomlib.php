@@ -62,7 +62,13 @@ class AtomParser {
         }
     }
 
+    function error_handler($log_level, $log_text, $error_file, $error_line) {
+        $this->error = $log_text;
+    }
+
     function parse() {
+
+        set_error_handler(array(&$this, 'error_handler'));
 
         array_unshift($this->ns_contexts, array());
 
@@ -79,26 +85,27 @@ class AtomParser {
 
         $this->content = '';
 
+        $ret = true;
+
         $fp = fopen($this->FILE, "r");
         while ($data = fread($fp, 4096)) {
             if($this->debug) $this->content .= $data;
             
-            try {
-                if(!xml_parse($parser, $data, feof($fp))) {
-                    throw new Exception(sprintf(__('XML error: %s at line %d')."\n",
-                        xml_error_string(xml_get_error_code($xml_parser)),
-                        xml_get_current_line_number($xml_parser)));
-                }
-            } catch(Exception $e) {
-                $this->error = $e->getMessage();
-                return false;
+            if(!xml_parse($parser, $data, feof($fp))) {
+                trigger_error(sprintf(__('XML error: %s at line %d')."\n",
+                    xml_error_string(xml_get_error_code($xml_parser)),
+                    xml_get_current_line_number($xml_parser)));
+                $ret = false;
+                break;
             }
         }
         fclose($fp);
 
         xml_parser_free($parser);
 
-        return true;
+        restore_error_handler();
+
+        return $ret;
     }
 
     function start_element($parser, $name, $attrs) {
@@ -127,7 +134,7 @@ class AtomParser {
             $this->content_ns_decls = array();
 
             if($this->is_html || $this->is_text)
-                throw new Exception("Invalid content in element found. Content must not be of type text or html if it contains markup.\n");
+                trigger_error("Invalid content in element found. Content must not be of type text or html if it contains markup.");
 
             $attrs_prefix = array();
 
